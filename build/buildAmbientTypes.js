@@ -3,7 +3,7 @@ const path = require('path');
 
 const moduleTypes = fs.readFileSync(path.resolve('./index.d.ts'), 'utf8');
 
-const importStatement = /import {([^}]*)} from 'pixi.js';/.exec(moduleTypes);
+const importStatement = /import {([^}]*)} from 'pixi.js-legacy';/.exec(moduleTypes);
 
 let ambientTypes = moduleTypes.replace(importStatement[0], 'declare namespace PIXI.particles {') + '\n}';
 

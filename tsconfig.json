@@ -3,7 +3,7 @@
 		"target": "ES5",
 		"module": "commonjs",
 		"noImplicitAny": true,
-		"types": ["pixi.js"],
+		"types": ["pixi.js-legacy"],
 		"noEmit": true
 	},
 	"include": [

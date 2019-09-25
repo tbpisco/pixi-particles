@@ -3,23 +3,13 @@ import {Particle} from "./Particle";
 import {PropertyNode} from "./PropertyNode";
 import {PolygonalChain} from "./PolygonalChain";
 import {EmitterConfig, OldEmitterConfig} from "./EmitterConfig";
-import {Point, Circle, Rectangle, Container, settings} from "pixi.js";
-import * as pixi from "pixi.js";
+import {Point, Circle, Rectangle, Container, settings} from "pixi.js-legacy";
+import * as pixi from "pixi.js-legacy";
 // get the shared ticker, in V4 and V5 friendly methods
 /**
  * @hidden
  */
-let ticker: pixi.ticker.Ticker;
-// to avoid Rollup transforming our import, save pixi namespace in a variable
-const pixiNS = pixi;
-if (parseInt(/^(\d+)\./.exec(pixi.VERSION)[1]) < 5)
-{
-	ticker = pixiNS.ticker.shared;
-}
-else
-{
-	ticker = (pixiNS as any).Ticker.shared;
-}
+let ticker: pixi.Ticker = pixi.Ticker.shared;
 
 export interface ParticleConstructor
 {

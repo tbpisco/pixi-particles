@@ -1,4 +1,4 @@
-import {BLEND_MODES, Point} from 'pixi.js';
+import {BLEND_MODES, Point} from 'pixi.js-legacy';
 import {PropertyNode, ValueStep} from './PropertyNode';
 
 export interface Color {

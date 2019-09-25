@@ -55,7 +55,7 @@ async function main()
 				sourcemap,
 			},
 		],
-		external: ['pixi.js'],
+		external: ['pixi.js-legacy'],
 		plugins: [jscc({values:{_IIFE:false}})].concat(plugins)
 	});
 
@@ -75,11 +75,11 @@ async function main()
 				sourcemap,
 				extend: true,
 				globals: {
-					'pixi.js': 'PIXI'
+					'pixi.js-legacy': 'PIXI'
 				}
 			},
 			treeshake: false,
-			external: ['pixi.js'],
+			external: ['pixi.js-legacy'],
 			plugins: [jscc({values:{_IIFE:true}})].concat(plugins),
 		});
 	}
